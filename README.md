@@ -10,7 +10,7 @@ var emojisplit = new EmojiSplit().create(); <br/>
 var result = emojisplit.splitBySymbol('I ❤ you 💏', '//'); <br/> 
 Hints:    <br/>
 + You need call the method create before using splitBySymbol method.
-+ The splitBySymbol method has two parameters: the first parameter is input emoji string that you need split, the second paramenter is the pattern symbol that you want. This symbol need no appear in your emoji string. You can choose any symbols you want, just mismatch with any symbol in your input emojji string. <br/>
++ The splitBySymbol method has two parameters: the first parameter is input emoji string that you need split, the second parameter is the pattern symbol that you want to separate (this parameter is optional). This symbol need no appear in your emoji string. You can choose any symbols you want, just mismatch with any symbol in your input emojji string. <br/>
 =======================   <br/>
 Here are some examples:  <br/>
 'I ❤ you 💏' ==> I ,❤, you ,💏, <br/>
