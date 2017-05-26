@@ -1,6 +1,7 @@
 var EmojiSpliter = function(){
 	var json = '';
 	var predic = new Array(); 
+	var stack = '';
 	
 	this.loadData = function(){
 		json = (function () {
@@ -31,6 +32,20 @@ var EmojiSpliter = function(){
 		temp=null;
 		return str;
 	}
+	
+	function generateUID() {
+	  function s4() {
+		return Math.floor((1 + Math.random()) * 0x10000)
+		  .toString(16)
+		  .substring(1);
+	  }
+	  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		s4() + '-' + s4() + s4() + s4();
+	}
+	
+	function getBackFromUID(eleID, st){
+		return st[eleID];
+	}
 
 	this.splitBySymbol = function(emojistr, symbol){
 		$.each(json, function(k, v){
@@ -46,12 +61,26 @@ var EmojiSpliter = function(){
 				predic[0].push([decodeEntities(v['code_decimal']), v['unicode']]);
 		});
 		
+		stack = "{";		
 		for(var i=4; i>=0; i--)
 			$.each(predic[i], function(it, val){
-				if(emojistr.indexOf(val[0])>=0)
-					emojistr = emojistr.replace(RegExp(val[0], 'g'), symbol+val[0]+symbol);
+				if(emojistr.indexOf(val[0])>=0){
+					var guid = generateUID();
+					stack += '"'+guid+'":' + '"'+val[0]+'",';
+					emojistr = emojistr.replace(RegExp(val[0], 'g'), symbol+guid+symbol);
+				}
 			});
-		
-		return emojistr.split(RegExp(symbol, 'g'));
+		stack = stack.substring(0, stack.length-1)+'}';
+		var stackUID = JSON.parse(stack);
+			
+		var splitUID = emojistr.split(RegExp(symbol, 'g'));
+		var result = new Array();
+		for(var i=0; i<splitUID.length; i++){
+			if(stackUID[splitUID[i]]!=null)
+				result.push(stackUID[splitUID[i]]);
+			else
+				result.push(splitUID[i]);
+		}
+		return result;
 	}
 }
