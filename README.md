@@ -17,3 +17,5 @@ Hints:    <br/>
 Here are some examples:  <br/>
 'I ❤ you 💏' ==> I ,❤, you ,💏, <br/>
 'This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽'  ==>  This ,🎄,,🎅🏼,, my ,👨‍👩‍👧‍👦, will go to ,🗽,
+
+This library works well on allmost browsers.
