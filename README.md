@@ -13,4 +13,4 @@ Hints:
 + The splitBySymbol method has two parameters: the first parameter is input emoji string that you need split, the second paramenter is the pattern symbol that you want. This symbol need no appear in your emoji string. You can choose any symbols you want, just mismatch with any symbol in your input emojji string.
 =======================
 Here are some examples:
-
+'I ❤ you 💏' ==> I ,❤, you ,💏,
