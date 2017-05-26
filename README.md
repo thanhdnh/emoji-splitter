@@ -7,7 +7,7 @@ Required other data: emoji.json.
 ----------------------  <br/>
 In order to use this library, you need:
 1) Include jquery library before including this library.
-2) In your code editor, at the point you want to split emojis string, you need do as following  
+2) In your code editor, at the point you want to split emojis string, you need to do as following  
 var emojisplit = new EmojiSplit().create(); <br/>
 var result = emojisplit.splitBySymbol('I ❤ you 💏', '//'); <br/> 
 Hints:    <br/>
