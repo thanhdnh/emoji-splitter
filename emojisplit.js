@@ -83,6 +83,6 @@ var EmojiSpliter = function(){
 			else
 				result.push(splitUID[i]);
 		}
-		return result;
+		return result.filter(Boolean);;
 	}
 }
