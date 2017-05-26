@@ -72,7 +72,10 @@ var EmojiSpliter = function(){
 					emojistr = emojistr.replace(RegExp(val[0], 'g'), symbol+guid+symbol);
 				}
 			});
-		stack = stack.substring(0, stack.length-1)+'}';
+		if(stack.length>2)
+			stack = stack.substring(0, stack.length-1)+'}';
+		else
+			stack = stack+'}';
 		var stackUID = JSON.parse(stack);
 			
 		var splitUID = emojistr.split(RegExp(symbol, 'g'));
@@ -83,6 +86,6 @@ var EmojiSpliter = function(){
 			else
 				result.push(splitUID[i]);
 		}
-		return result.filter(Boolean);;
+		return result.filter(Boolean);
 	}
 }
