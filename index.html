@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <meta charset='utf-8'>
 <script src='jquery.min.js'></script>
 <script src='emojisplit.js'></script>
@@ -6,6 +6,9 @@
 	<script>
 		var m = new EmojiSpliter().create();
 		var result = m.splitBySymbol('I ❤ you 💏','//');
+		document.write(result);
+		document.write('<br>');
+		result = m.splitBySymbol('This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽', '//');
 		document.write(result);
 	</script>
 </body>
