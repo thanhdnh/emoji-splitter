@@ -48,7 +48,7 @@ var EmojiSpliter = function(){
 	}
 
 	this.splitBySymbol = function(emojistr, symbol){
-		if(symbol=='undefined')
+		if(symbol==undefined)
 			symbol = '/////';
 		$.each(json, function(k, v){
 			if(v['code_decimal'].split('&zwj;').length===4 || v['code_decimal'].split('&#8205;').length===4)
