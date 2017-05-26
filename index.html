@@ -6,10 +6,13 @@
 	<script>
 		var m = new EmojiSpliter().create();
 		var result = m.splitBySymbol('I ❤ you 💏');
-		document.write(result);
+		document.write('I ❤ you 💏'+' ==> '+result);
 		document.write('<br>');
 		result = m.splitBySymbol('This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽', '//');
-		document.write(result);
+		document.write('This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽'+' ==> '+result);
+		document.write('<br>');
+		result = m.splitBySymbol('👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋');
+		document.write('👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋'+' ==> '+result);
 	</script>
 </body>
 </html>
