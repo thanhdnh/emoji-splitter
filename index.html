@@ -3,16 +3,31 @@
 <script src='jquery.min.js'></script>
 <script src='emojisplit.js'></script>
 <body>
+	<p>Visit our site: <a href='https://www.emojionline.org'>https://www.emojionline.org</a></p>
+	<input type='text' id='txt' style='font-size:20px;padding:2px;width:100%;'><br>
+	<input type='button' id='btsplit' value='Split' onclick='btSplitClicked()' style='padding:5px 20px;margin-top:10px;'>
+	<hr>
+	<div id='result' style='line-height:35px;'></div>
+	
 	<script>
 		var m = new EmojiSpliter().create();
 		var result = m.splitBySymbol('I ❤ you 💏');
-		document.write('I ❤ you 💏'+' ==> '+result);
-		document.write('<br>');
+		
+		var str = '';
+		str += 'I ❤ you 💏'+' ==> '+result;
+		str += '<br>';
 		result = m.splitBySymbol('This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽', '//');
-		document.write('This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽'+' ==> '+result);
-		document.write('<br>');
+		str += 'This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽'+' ==> '+result;
+		str += '<br>';
 		result = m.splitBySymbol('👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋');
-		document.write('👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋'+' ==> '+result);
+		str += '👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋'+' ==> '+result;
+		document.getElementById('result').innerHTML = str;
+		
+		function btSplitClicked(){
+			result = m.splitBySymbol($('#txt').val());
+			str += $('#txt').val()+' ==> '+result;
+			document.getElementById('result').innerHTML = str;
+		}
 	</script>
 </body>
 </html>
