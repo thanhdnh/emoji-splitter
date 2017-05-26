@@ -1,9 +1,9 @@
 # emojiSplit
-This javascript library allows you perform emoji string splitting. If you want to extend this project to work with almost unicode string, you just need extend the data file (append data into emoji.json). <br/>
+This javascript library allows you perform splitting emoji string. If you want to extend this project to work with almost unicode string, you just need to extend the data file (append data into emoji.json). <br/>
 This project is a part of [https://www.emojionline.org](https://www.emojionline.org) <br/>
 ====================== <br/>
-*Required library: jquery.  
-*Required other data: emoji.json.  
+*Required library: jquery. <br/> 
+*Required other data: emoji.json. <br/>
 ----------------------  <br/>
 In order to use this library, you need:
 1) Include jquery library before including this library.
