@@ -21,12 +21,14 @@
 		str += '<br>';
 		result = m.splitBySymbol('👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋');
 		str += '👨🏾‍🎓👷🏿👸🏻👢👨‍👨‍👦👩‍👩‍👦💑🤦🏼🙋'+' ==> '+result;
+		str += '<br>';
 		document.getElementById('result').innerHTML = str;
 		
 		function btSplitClicked(){
 			result = m.splitBySymbol($('#txt').val());
 			str += $('#txt').val()+' ==> '+result;
-			document.getElementById('result').innerHTML = str+"<br>";
+			str += '<br>';
+			document.getElementById('result').innerHTML = str;
 		}
 	</script>
 </body>
