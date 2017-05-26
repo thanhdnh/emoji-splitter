@@ -13,4 +13,5 @@ Hints:    <br/>
 + The splitBySymbol method has two parameters: the first parameter is input emoji string that you need split, the second paramenter is the pattern symbol that you want. This symbol need no appear in your emoji string. You can choose any symbols you want, just mismatch with any symbol in your input emojji string. <br/>
 =======================   <br/>
 Here are some examples:  <br/>
-'I ❤ you 💏' ==> I ,❤, you ,💏,
+'I ❤ you 💏' ==> I ,❤, you ,💏, <br/>
+'This 🎄🎅🏼, my 👨‍👩‍👧‍👦 will go to 🗽'  ==>  This ,🎄,,🎅🏼,, my ,👨‍👩‍👧‍👦, will go to ,🗽,
